@@ -1,0 +1,257 @@
+@import "fonts";
+@import "vars";
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*:before {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: inherit;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+body {
+  @extend %Ubuntu-Light;
+  font-size: 15px;
+  overflow-x: hidden;
+  color: #ffffff;
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 43px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    @extend %Ubuntu-Medium;
+    line-height: 17px;
+    padding: 6px 28px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin: 0 8px;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.menu {
+  &__items {
+    display: flex;
+  }
+  &__item {
+    padding: 0 10px;
+  }
+  &__link {
+    @extend %Ubuntu-Medium;
+    line-height: 17px;
+  }
+}
+
+.section {
+  &.top {
+    background: center/ cover no-repeat url(../images/bg-first-page.jpg);
+    position: relative;
+    &::after {
+      content: "";
+      background: radial-gradient(
+        45.97% 54.43% at 50% 45.57%,
+        rgba(23, 26, 28, 0) 50.28%,
+        rgba(23, 26, 28, 0.00225974) 50.29%,
+        rgba(4, 5, 5, 0.820343) 58.72%,
+        rgba(5, 5, 6, 0.792703) 80.08%,
+        #000000 87.89%
+      );
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &.about {
+    background: center/ cover no-repeat url(../images/bg-image.jpg);
+    position: relative;
+    &::after {
+      content: "";
+      background: linear-gradient(
+        119.35deg,
+        rgba(23, 26, 28, 0.72) 0%,
+        #5e5e57 100%
+      );
+      opacity: 0.15;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.top {
+  &__inner {
+    padding-top: 120px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+  }
+  &__header {
+    @extend %sf-semibold;
+    font-size: 96px;
+    line-height: 115px;
+    margin-bottom: 5vh;
+  }
+  &__text {
+    margin: 6vh 0 9vh;
+    font-size: 17px;
+    line-height: 150%;
+    max-width: 325px;
+    text-align: center;
+  }
+}
+
+.social {
+  &__link {
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+    & + .social__link {
+      margin-left: 50px;
+    }
+  }
+}
+
+.scroll-arrow {
+  margin: 1vh 0 30px;
+}
+
+.about {
+  &__inner {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 13vh;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__description {
+    margin: 100px 0 0 25px;
+  }
+  &__title {
+    @extend %sf-regular;
+    font-size: 44px;
+    line-height: 53px;
+    max-width: 440px;
+  }
+  &__text-box {
+    margin: 55px 0 0 30px;
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 150%;
+    max-width: 440px;
+    & + .about__text {
+      margin-top: 25px;
+    }
+  }
+  &__slider-box {
+    margin: 35vh 60px 0;
+    max-width: 560px;
+    max-height: 300px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: -17px;
+      width: 562px;
+      height: 278px;
+      border: 4px solid #ffffff;
+    }
+  }
+  &__slider {
+    z-index: 1;
+  }
+  &__slider-text {
+    position: absolute;
+    bottom: 0px;
+    left: -242px;
+    @extend %Ubuntu-Medium;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+    max-width: 285px;
+    z-index: 2;
+  }
+  &__slider-img {
+    position: relative;
+    max-width: 560px;
+  }
+  &__slider-btn {
+    position: absolute;
+    bottom: -51px;
+    right: 0;
+    padding: 16px 26px;
+    border: none;
+    &-left {
+      right: 62px;
+    }
+    &.slick-disabled {
+      background-color: #1c1c1c;
+      color: #ffffff;
+    }
+  }
+}

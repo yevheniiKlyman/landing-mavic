@@ -1,0 +1,59 @@
+{
+  "name": "landing-mavic",
+  "version": "1.0.0",
+  "description": "A form in which the user can ask the author a question",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open 'firefox'",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eKliman/question-app.git"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 3 version"
+  ],
+  "keywords": [],
+  "author": "Eugene <kliman.evgeniy@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eKliman/landing-mavic/issues"
+  },
+  "homepage": "https://github.com/eKliman/landing-mavic#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "autoprefixer": "^9.8.2",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-cli": "^7.1.1",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^9.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
+    "whatwg-fetch": "^3.2.0"
+  }
+}
