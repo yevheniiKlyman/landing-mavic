@@ -5,6 +5,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 *,
 *::after,
@@ -31,6 +32,7 @@ button {
   margin: 0;
   cursor: pointer;
   outline: none;
+  text-transform: capitalize;
 }
 p {
   margin: 0;
@@ -68,20 +70,40 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  &__btn {
-    @extend %Ubuntu-Medium;
-    line-height: 17px;
-    padding: 6px 28px;
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 3px;
-    transition: 0.3s;
+}
+.button {
+  position: relative;
+  @extend %Ubuntu-Medium;
+  line-height: 17px;
+  padding: 6px 28px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  transition: 0.3s;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60px;
+    height: 100%;
+    background-color: #fff;
+    filter: blur(40px);
+    transform: skewX(-30deg);
+    transition: 1s;
+    animation: moveLight 8s 5s infinite;
+  }
+  &:hover::before {
+    left: 120%;
+  }
+  &.header-btn {
     margin: 0 8px;
-    &:hover {
-      color: #000000;
-      background-color: #ffffff;
-    }
+  }
+  &:hover {
+    color: #000000;
+    background-color: #ffffff;
   }
 }
 
@@ -100,6 +122,7 @@ body {
 
 .section {
   position: relative;
+  overflow: hidden;
 }
 
 .top {
@@ -185,7 +208,7 @@ body {
   }
 }
 
-.facebook {
+.facebook-top {
   opacity: 0;
   transform: translateX(-300%) rotate(-360deg);
   &.animate {
@@ -193,7 +216,7 @@ body {
   }
 }
 
-.youtube {
+.youtube-top {
   opacity: 0;
   transform: scale3d(0.3, 0.3, 0.3);
   &.animate {
@@ -201,7 +224,7 @@ body {
   }
 }
 
-.instagram {
+.instagram-top {
   opacity: 0;
   transform: translateX(300%) rotate(360deg);
   &.animate {
@@ -222,7 +245,9 @@ body {
 
 .about,
 .advantages,
-.specification {
+.specification,
+.questions,
+.contacts {
   background: center/ cover no-repeat url(../images/bg-image.jpg);
   position: relative;
   &::after {
@@ -258,7 +283,7 @@ body {
     max-width: 440px;
     opacity: 0;
     &.animate {
-      animation: fadeIn 1s forwards;
+      animation: fadeIn 1s 0.3s forwards;
     }
   }
   &__text-box {
@@ -484,7 +509,7 @@ body {
     padding-bottom: 8vh;
     opacity: 0;
     &.animate {
-      animation: fadeIn 0.5s forwards;
+      animation: fadeIn 1s 0.3s forwards;
     }
   }
   &__content {
@@ -584,5 +609,269 @@ body {
   &__pointer4 {
     top: -13px;
     left: -99px;
+  }
+}
+
+.questions {
+  &__inner {
+    position: relative;
+    min-height: 100vh;
+    padding: 20vh 0 55px 0;
+    z-index: 1;
+    width: 100%;
+  }
+  &__title {
+    padding-bottom: 8vh;
+    opacity: 0;
+    &.animate {
+      animation: fadeIn 1s 0.3s forwards;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 165px;
+    right: 0;
+    opacity: 0;
+    transform: translate3d(-100%, -100%, 0);
+    &.animate {
+      animation: fadeInTopLeftQuestions 2s forwards 1s;
+    }
+  }
+}
+.accordion {
+  &__item {
+    position: relative;
+    z-index: 2;
+    padding-left: 50px;
+    padding-right: 10px;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translate3d(0, 200%, 0);
+    & + & {
+      margin-top: 5px;
+    }
+    &:first-child {
+      &.animate {
+        animation: fadeInUp95 1s forwards;
+      }
+    }
+    &:nth-child(2) {
+      &.animate {
+        animation: fadeInUp95 1s forwards 0.3s;
+      }
+    }
+    &:nth-child(3) {
+      &.animate {
+        animation: fadeInUp95 1s forwards 0.6s;
+      }
+    }
+    &:last-child {
+      &.animate {
+        animation: fadeInUp95 1s forwards 0.9s;
+      }
+    }
+  }
+  &__item-title {
+    position: relative;
+    padding: 20px 0;
+    margin-left: -10px;
+    @extend %Ubuntu-Medium;
+    font-size: 21px;
+    line-height: 28px;
+    cursor: pointer;
+    &::after {
+      content: url(../images/arrow-down.svg);
+      position: absolute;
+      padding: 20px 24px;
+      background-color: #fff;
+      top: 0;
+      right: -78px;
+    }
+    &.is-open::after {
+      transform: rotate(180deg);
+    }
+  }
+  &__item-text {
+    line-height: 150%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+  }
+}
+
+.contacts {
+  &__inner {
+    min-height: 100vh;
+    padding-top: 20vh;
+    position: relative;
+    z-index: 1;
+  }
+  &__title {
+    margin-left: 25px;
+    opacity: 0;
+    &.animate {
+      animation: fadeIn 1s 0.3s forwards;
+    }
+  }
+  &__content {
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  &__contacts-box {
+    max-width: 310px;
+    margin: 0 5vw 0 3vw;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+    & + & {
+      margin-top: 30px;
+    }
+    &:first-child.animate {
+      animation: fadeInLeft 1s forwards 0.3s;
+    }
+    &:nth-child(2).animate {
+      animation: fadeInLeft 1s forwards 0.6s;
+    }
+    &:last-child.animate {
+      animation: fadeInLeft 1s forwards 0.9s;
+    }
+  }
+  &__city {
+    @extend %Ubuntu-Bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+  &__telephone {
+    margin: 13px 0 5px;
+    line-height: 130%;
+  }
+  &__email {
+    line-height: 130%;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__form {
+    margin-right: 5vw;
+    max-width: 570px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  &__form-title {
+    @extend %Ubuntu-Bold;
+    font-size: 21px;
+    line-height: 24px;
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    &.animate {
+      animation: zoomIn 1s forwards 0.9s;
+    }
+  }
+  &__form-text {
+    opacity: 0;
+    width: 100%;
+    padding: 12px 0;
+    line-height: 130%;
+  }
+  &__inputs-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input,
+  &__message {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    opacity: 0.95;
+    color: #fff;
+    outline: none;
+    &::placeholder {
+      font-size: 13px;
+      line-height: 130%;
+    }
+  }
+  &__input {
+    width: 100%;
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    & + & {
+      margin-left: 10px;
+    }
+    &:first-child.animate {
+      animation: zoomIn 0.5s forwards 1.2s;
+    }
+    &:last-child.animate {
+      animation: zoomIn 0.5s forwards 1.5s;
+    }
+  }
+  &__message {
+    max-width: 570px;
+    min-height: 144px;
+    width: 100%;
+    margin: 10px 0 20px;
+    resize: none;
+    opacity: 0;
+    &.animate {
+      animation: zoomIn 0.5s forwards 1.8s;
+    }
+  }
+  &__btn {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    &.animate {
+      animation: zoomInTada 2s forwards 1.8s;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+  }
+  &__social-link {
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+    & + & {
+      margin-top: 25px;
+    }
+  }
+}
+.facebook-contacts {
+  opacity: 0;
+  transform: translate3d(300%, -300%, 0);
+  &.animate {
+    animation: fadeInTopRight 1s forwards 2s;
+  }
+}
+.youtube-contacts {
+  opacity: 0;
+  transform: translate3d(300%, 0, 0);
+  &.animate {
+    animation: fadeInRight 1s forwards 2s;
+  }
+}
+.instagram-contacts {
+  opacity: 0;
+  transform: translate3d(300%, 300%, 0);
+  &.animate {
+    animation: fadeInBottomRight 1s forwards 2s;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 32px;
+  right: 0;
+  &__copy {
+    font-size: 13px;
+    line-height: 130%;
+    opacity: 0.64;
   }
 }

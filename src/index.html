@@ -10,7 +10,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__inner">
+      <div class="header__inner" id="header-inner">
         <a class="logo" href="#">
           <picture class="logo__img">
             <source srcset="images/logo-mobile.png" media="(max-width: 600px)">
@@ -29,15 +29,15 @@
               <a href="#specification" class="menu__link">ХАРАКТЕРИСТИКИ</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">ВОПРОСЫ</a>
+              <a href="#questions" class="menu__link">ВОПРОСЫ</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">КОНТАКТЫ</a>
+              <a href="#contacts" class="menu__link">КОНТАКТЫ</a>
             </li>
           </ul>
         </nav>
         <div class="header__info">
-          <button class="header__btn">КУПИТЬ</button>
+          <button class="button header-btn">КУПИТЬ</button>
           <a href="tel:80505676767" class="header__phone">8 (050) 567 67 67</a>
         </div>
       </div>
@@ -52,24 +52,24 @@
         <p class="top__text top-animate">Квадрокоптер Dji Mavic 2 Pro <br> с профессиональной камерой Hasselblad</p>
         <div class="social">
           <a href="#" class="social__link">
-            <svg class="social__icon  facebook  top-animate" width="40" height="40">
+            <svg class="social__icon  facebook-top top-animate" width="40" height="40">
               <use xlink:href="images/icons.svg#facebook"></use>
             </svg>
           </a>
           <a href="#" class="social__link">
-            <svg class="social__icon  youtube top-animate" width="40" height="40">
+            <svg class="social__icon  youtube-top top-animate" width="40" height="40">
               <use xlink:href="images/icons.svg#youtube"></use>
             </svg>
           </a>
           <a href="#" class="social__link">
-            <svg class="social__icon instagram  top-animate" width="40" height="40">
+            <svg class="social__icon instagram-top top-animate" width="40" height="40">
               <use xlink:href="images/icons.svg#instagram"></use>
             </svg>
           </a>
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-arrow">
+    <a href="#about" class="scroll-arrow" id="scroll-arrow-link">
       <svg class="scroll-arrow__icon" id="scroll-arrow" width="17" height="9">
         <use xlink:href="images/icons.svg#scroll-arrow"></use>
       </svg>
@@ -126,7 +126,7 @@
         </div>
       </div>
     </div>
-    <a href="#advantages" class="scroll-arrow">
+    <a href="#advantages" class="scroll-arrow" id="scroll-arrow-link">
       <svg class="scroll-arrow__icon" id="scroll-arrow" width="17" height="9">
         <use xlink:href="images/icons.svg#scroll-arrow"></use>
       </svg>
@@ -204,7 +204,7 @@
         </div>
       </div>
     </div>
-    <a href="#specification" class="scroll-arrow">
+    <a href="#specification" class="scroll-arrow" id="scroll-arrow-link">
       <svg class="scroll-arrow__icon" id="scroll-arrow" width="17" height="9">
         <use xlink:href="images/icons.svg#scroll-arrow"></use>
       </svg>
@@ -277,11 +277,122 @@
       </div>
     </div>
     </div>
+    <a href="#questions" class="scroll-arrow" id="scroll-arrow-link">
+      <svg class="scroll-arrow__icon" id="scroll-arrow" width="17" height="9">
+        <use xlink:href="images/icons.svg#scroll-arrow"></use>
+      </svg>
+    </a>
+  </section>
+
+  <section class="section questions" id="questions">
+    <div class="container">
+      <div class="questions__inner">
+        <h3 class="questions__title title questions-animate">Остались вопросы?</h3>
+        <div class="accordion" id="accordion">
+          <div class="accordion__item questions-animate">
+            <h6 class="accordion__item-title">Как далеко может улететь Mavic 2?</h6>
+            <p class="accordion__item-text">Благодаря новой системе передачи OcuSync 2.0, Mavic 2 может
+              отлетатьна
+              расстояние
+              до 8 км (около 5 миль), но только в случае, если между контроллером и беспилотником нет препятствий.</p>
+          </div>
+          <div class="accordion__item questions-animate">
+            <h6 class="accordion__item-title">Какой объем памяти у Mavic 2?</h6>
+            <p class="accordion__item-text">Помимо 8Гб встроенной памяти, есть возможность вставить microSD
+              карту
+              с
+              максимальным объемом 128Гб. Такой объем поможет сохранить все ваши фото и видео. Мы бы посоветовали
+              microSD карты с UHS-I Speed Grade 3, как идеальный вариант.</p>
+          </div>
+          <div class="accordion__item questions-animate">
+            <h6 class="accordion__item-title">Чем Mavic 2 лучше Mavic Pro?</h6>
+            <p class="accordion__item-text">В Mavic 2 улучшены практически все аспекты: камера, передача
+              видеосигнала,
+              полётное время, скорость, уровень шума, обнаружение препятствий в нескольких направлениях,
+              интеллектуальные функции и уникальная функция Hyperlapse (гиперлапс).</p>
+          </div>
+          <div class="accordion__item questions-animate">
+            <h6 class="accordion__item-title">Можно ли подключить Mavic 2 к очкам DJI Goggles?</h6>
+            <p class="accordion__item-text">Mavic 2 поддерживает версию 01.04.0500 (и выше) очков DJI Goggles и
+              версию
+              01.00.0600 (и выше) очков DJI Goggles RE. Пожалуйста, учтите, что очки DJI Goggles поддерживают только
+              частоту 2,4 ГГц, а модель DJI Goggles RE работает, как на частоте 2,4, так и на частоте 5,8 ГГц, что
+              упрощает процесс подключения.</p>
+          </div>
+        </div>
+        <img class="questions__img questions-animate" id="questions-img" src="images/questions-img.png"
+          alt="mavic 2 pro">
+      </div>
+    </div>
+    <a href="#contacts" class="scroll-arrow" id="scroll-arrow-link">
+      <svg class="scroll-arrow__icon" id="scroll-arrow" width="17" height="9">
+        <use xlink:href="images/icons.svg#scroll-arrow"></use>
+      </svg>
+    </a>
+  </section>
+
+  <section class="section contacts" id="contacts">
+    <div class="container">
+      <div class="contacts__inner">
+        <h3 class="contacts__title title contacts-animate">Контакты</h3>
+        <div class="contacts__content">
+          <div class="contacts__contacts-box">
+            <div class="contacts__item contacts-animate">
+              <span class="contacts__city">Киев</span>
+              <a class="contacts__telephone" href="tel:+80505676767">+8 (050) 567–67–67</a>
+              <a class="contacts__email" href="mailto:dgi.mavic2pro.kiev@mail.ru">dgi.mavic2pro.kiev@mail.ru</a>
+            </div>
+            <div class="contacts__item contacts-animate">
+              <span class="contacts__city">Москва</span>
+              <a class="contacts__telephone" href="tel:+74995676767">+7 (499) 567–67–67</a>
+              <a class="contacts__email" href="mailto:dgi.mavic2pro.moscow@mail.ru">dgi.mavic2pro.moscow@mail.ru</a>
+            </div>
+            <div class="contacts__item contacts-animate">
+              <span class="contacts__city">Минск</span>
+              <a class="contacts__telephone" href="tel:+375175676767">+3 (7517) 567–67–67</a>
+              <a class="contacts__email" href="mailto:dgi.mavic2pro.minsk@mail.ru">dgi.mavic2pro.minsk@mail.ru</a>
+            </div>
+          </div>
+          <form class="contacts__form">
+            <h6 class="contacts__form-title contacts-animate" id="contacts-form-title">Остались вопросы?</h6>
+            <p class="contacts__form-text contacts-animate" id="contacts__form-text">Мы обязательно свяжемся с вами в
+              течение двух рабочих дней
+            </p>
+            <div class="contacts__inputs-box">
+              <input class="contacts__input contacts-animate" type="text" placeholder="Ваше имя">
+              <input class="contacts__input contacts-animate" type="text" placeholder="Ваше e-mail">
+            </div>
+            <textarea class="contacts__message contacts-animate" placeholder="Что вас интересует?"></textarea>
+            <button class="button contacts__btn contacts-animate">ОТПРАВИТЬ</button>
+          </form>
+          <div class="contacts__social">
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-icon  facebook-contacts contacts-animate" width="40" height="40">
+                <use xlink:href="images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-icon  youtube-contacts contacts-animate" width="40" height="40">
+                <use xlink:href="images/icons.svg#youtube"></use>
+              </svg>
+            </a>
+            <a class="contacts__social-link" href="#">
+              <svg class="contacts__social-icon instagram-contacts contacts-animate" width="40" height="40">
+                <use xlink:href="images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <span class="footer__copy">© DJI, 2020</span>
+        </footer>
+      </div>
+    </div>
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous">
-    </script>
+    integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
