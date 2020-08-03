@@ -31,7 +31,7 @@ const dataForAnimate = [
   [contacts, contactsItemsForAnimate],
 ];
 const headerInner = document.getElementById('header-inner');
-const scrollArrow = document.querySelectorAll('#scroll-arrow-link');
+const scrollArrow = document.querySelectorAll('.scroll-arrow');
 
 let currentSectionIndex = 0;
 let prevScrollTop;
