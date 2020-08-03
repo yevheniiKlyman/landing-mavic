@@ -2,6 +2,12 @@ const questionsImg = document.getElementById('questions-img');
 const contactsFormText = document.getElementById('contacts__form-text');
 const contactsFormTitle = document.getElementById('contacts-form-title');
 
+export function addAnimate(items) {
+  items.forEach((item) => {
+    item.classList.add('animate');
+  });
+}
+
 //animation question-image
 const animateImg = () => {
   requestAnimationFrame(() => {

@@ -17,7 +17,7 @@
             <img src="images/logo.png" alt="logo">
           </picture>
         </a>
-        <nav class="menu">
+        <nav class="menu" id="menu">
           <ul class="menu__items">
             <li class="menu__item">
               <a href="#about" class="menu__link">О ДРОНЕ</a>
@@ -37,8 +37,11 @@
           </ul>
         </nav>
         <div class="header__info">
-          <button class="button header-btn">КУПИТЬ</button>
+          <button class="button header-btn" id="buy-btn">КУПИТЬ</button>
           <a href="tel:80505676767" class="header__phone">8 (050) 567 67 67</a>
+          <a href="#" class="header__m-menu" id="m-menu-btn">
+            <span class="header__m-menu-span" id="m-menu-span"></span>
+          </a>
         </div>
       </div>
     </div>
@@ -152,7 +155,7 @@
               xmlns="http://www.w3.org/2000/svg">
               <path class="advantages__path-line1to2 advantages-animate" opacity="0.37"
                 d="M246 41.3299C112.088 67.1402 156.11 -22.7031 1 7.15601" stroke="#E6E6E6" stroke-width="1.5"
-                stroke-dasharray="9 4" />
+                stroke-dasharray="9 4"></path>
             </svg>
           </div>
           <div class="advantages__item advantages-animate">
@@ -161,7 +164,7 @@
               <img src="images/advantage2.jpg" alt="remote controller" class="advantages__img">
             </div>
             <div class="advantages__item-text-block">
-              <h4 class="advantages__item-title">Active<br> Track 2.0</h4>
+              <h4 class="advantages__item-title">Active Track 2.0</h4>
               <p class="advantages__item-text">Усовершенствованный режим второго поколения распознаёт и отслеживает
                 объекты ещё точнее, быстрее и умнее.</p>
             </div>
@@ -169,7 +172,7 @@
               xmlns="http://www.w3.org/2000/svg">
               <path class="advantages__path-line2to3 advantages-animate" opacity="0.37"
                 d="M1.5 63.5C22 32.5 74 5.93359 179.5 15C285 24.0664 363.5 69 464.5 1" stroke="#E6E6E6"
-                stroke-width="1.5" stroke-dasharray="9 4" />
+                stroke-width="1.5" stroke-dasharray="9 4"></path>
             </svg>
           </div>
           <div class="advantages__item advantages-animate">
@@ -186,7 +189,7 @@
               xmlns="http://www.w3.org/2000/svg">
               <path class="advantages__path-line3to4 advantages-animate" opacity="0.37"
                 d="M255 34.9787C120.193 60.6914 157.148 -22.209 1.00001 7.53705" stroke="#E6E6E6" stroke-width="1.5"
-                stroke-dasharray="9 4" />
+                stroke-dasharray="9 4"></path>
             </svg>
           </div>
           <div class="advantages__item advantages-animate">
@@ -225,9 +228,9 @@
               <svg class="specification__pointer1" width="198" height="168" viewBox="0 0 198 168" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <ellipse class="specification__pointer-dot specification-animate" cx="188.8" cy="161.5" rx="5.30805"
-                  ry="4.5" fill="#C4C4C4" />
+                  ry="4.5" fill="#C4C4C4"></ellipse>
                 <path class="specification__pointer-line1 specification-animate" d="M188.5,161.3L114.5,1H0"
-                  stroke="#C4C4C4" stroke-width="0.5" />
+                  stroke="#C4C4C4" stroke-width="0.5"></path>
               </svg>
             </div>
             <div class="specification__item">
@@ -238,9 +241,9 @@
               <svg class="specification__pointer2" width="346" height="82" viewBox="0 0 346 82" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <ellipse class="specification__pointer-dot specification-animate" cx="292.3" cy="18.5" rx="3.80685"
-                  ry="4.44368" fill="#C4C4C4" />
+                  ry="4.44368" fill="#C4C4C4"></ellipse>
                 <path class="specification__pointer-line2 specification-animate" d="M292.3,18.5L85,81H4.8"
-                  stroke="#C4C4C4" stroke-width="0.5" />
+                  stroke="#C4C4C4" stroke-width="0.5"></path>
               </svg>
             </div>
           </div>
@@ -254,9 +257,9 @@
               <svg class="specification__pointer3" width="203" height="124" viewBox="0 0 203 124" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <ellipse class="specification__pointer-dot specification-animate" cx="7" cy="118.7" rx="4.45122"
-                  ry="4.31314" fill="#C4C4C4" />
+                  ry="4.31314" fill="#C4C4C4"></ellipse>
                 <path class="specification__pointer-line3 specification-animate" d="M200.5,1h-85.6L7,118.7"
-                  stroke="#C4C4C4" stroke-width="0.5" />
+                  stroke="#C4C4C4" stroke-width="0.5"></path>
               </svg>
             </div>
             <div class="specification__item">
@@ -267,9 +270,9 @@
               <svg class="specification__pointer4" width="79" height="28" viewBox="0 0 79 28" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <ellipse class="specification__pointer-dot specification-animate" cx="5.4" cy="6" rx="4.21519" ry="4.5"
-                  fill="#C4C4C4" />
+                  fill="#C4C4C4"></ellipse>
                 <path class="specification__pointer-line4 specification-animate" d="M5.4,6l57.9,21h15.2"
-                  stroke="#C4C4C4" stroke-width="0.5" />
+                  stroke="#C4C4C4" stroke-width="0.5"></path>
               </svg>
             </div>
           </div>
@@ -353,7 +356,7 @@
               <a class="contacts__email" href="mailto:dgi.mavic2pro.minsk@mail.ru">dgi.mavic2pro.minsk@mail.ru</a>
             </div>
           </div>
-          <form class="contacts__form">
+          <form class="contacts__form" id="contacts-form">
             <h6 class="contacts__form-title contacts-animate" id="contacts-form-title">Остались вопросы?</h6>
             <p class="contacts__form-text contacts-animate" id="contacts__form-text">Мы обязательно свяжемся с вами в
               течение двух рабочих дней
@@ -363,7 +366,7 @@
               <input class="contacts__input contacts-animate" type="text" placeholder="Ваше e-mail">
             </div>
             <textarea class="contacts__message contacts-animate" placeholder="Что вас интересует?"></textarea>
-            <button class="button contacts__btn contacts-animate">ОТПРАВИТЬ</button>
+            <button class="button contacts__btn contacts-animate" id="contacts-send" type="submit">ОТПРАВИТЬ</button>
           </form>
           <div class="contacts__social">
             <a class="contacts__social-link" href="#">
@@ -389,6 +392,36 @@
       </div>
     </div>
   </section>
+
+  <div class="modal" id="modal">
+    <div class="modal__inner" id="modal-inner">
+      <div class="modal__header">
+        <h6 class="modal__title">Оформление покупки</h6>
+        <button class="modal__close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__item-info">
+          <img src="images/modal-item.jpg" alt="mavic 2 pro" class="modal__item-img">
+          <span class="modal__item-price" id="item-price">14999 ₽</span>
+          <span class="modal__item-name">Mavic 2 Pro</span>
+        </div>
+        <div class="modal__total">
+          <span class="modal__total-price" id="total-price"></span>
+          <div class="modal__counter" id="modal-counter">
+            <button class="modal__counter-btn" id="counter-minus">&ndash;</button>
+            <span class="modal__counter-amount" id="counter-amount">1</span>
+            <button class="modal__counter-btn" id="counter-plus">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <div class="modal__buttons">
+          <button class="button modal__order" id="order-btn">Оформить заказ</button>
+          <button class="button modal__cancel" id="cancel-btn">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>

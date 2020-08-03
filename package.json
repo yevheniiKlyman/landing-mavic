@@ -4,7 +4,7 @@
   "description": "A form in which the user can ask the author a question",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open 'firefox'",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch"
