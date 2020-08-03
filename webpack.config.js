@@ -12,7 +12,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const PATHS = {
   src: path.resolve(__dirname, 'src'),
-  dist: path.resolve(__dirname, 'dist'),
+  dist: path.resolve(__dirname, 'docs'),
 };
 
 const optimization = () => {
