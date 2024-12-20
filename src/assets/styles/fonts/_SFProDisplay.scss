@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'SFProDisplay-Regular';
+  src: url('@/assets/fonts/SFProDisplay-Regular.woff') format('woff'),
+    url('@/assets/fonts/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Medium';
+  src: url('@/assets/fonts/SFProDisplay-Medium.woff') format('woff'),
+    url('@/assets/fonts/SFProDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFProDisplay-Semibold';
+  src: url('@/assets/fonts/SFProDisplay-Semibold.woff') format('woff'),
+    url('@/assets/fonts/SFProDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

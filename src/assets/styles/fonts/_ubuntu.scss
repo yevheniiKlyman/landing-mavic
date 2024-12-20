@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('@/assets/fonts/Ubuntu-Light.woff') format('woff'),
+    url('@/assets/fonts/Ubuntu-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('@/assets/fonts/Ubuntu-Medium.woff') format('woff'),
+    url('@/assets/fonts/Ubuntu-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('@/assets/fonts/Ubuntu-Bold.woff') format('woff'),
+    url('@/assets/fonts/Ubuntu-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

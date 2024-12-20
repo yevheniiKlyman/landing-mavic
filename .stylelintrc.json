@@ -1,0 +1,18 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "property-no-vendor-prefix": null,
+    "max-nesting-depth": 10,
+    "selector-no-qualifying-type": null,
+    "selector-max-compound-selectors": 10,
+    "function-calc-no-unspaced-operator": true,
+    "scss/operator-no-unspaced": true,
+    "scss/dollar-variable-pattern": null,
+    "scss/at-mixin-pattern": null,
+    "selector-class-pattern": null,
+    "selector-max-id": null
+  }
+}

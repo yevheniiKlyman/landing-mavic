@@ -1,0 +1,10 @@
+import 'normalize.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick';
+import './slider';
+import '../styles/index.scss';
+import './accordion';
+import './scroll';
+import './animation';
+import './menu';
+import './modal';
